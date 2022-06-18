@@ -4,22 +4,24 @@
 
 如果你想通过视频学习，可以关注作者的另一个视频课：QCon+ 专题[「TypeScript 实战课：自顶向下学习 TypeScript 类型系统」](https://qconplus.infoq.cn/2022/beijing/track/1376)。
 
-这本小册由接近40 节平均每节 4000 字的内容组成，包括 32 节主体内容、6节漫谈、3节 DevBlog （4.6、4.7、4.8，并会持续更新），包括了入门、进阶、类型系统、类型编程、实战环节、ECMAScript 语法、Compiler API、Node API 开发、漫谈、DevBlog 等多个部分，我可以很自信地说，**这是余杭区（杭州市）最好的 TypeScript 教程**。
+这本小册的主题由 32 节平均每节 5000 字的内容组成，包括了类型入门、类型工具、类型系统、类型编程、工程实战、装饰器、Node API 开发、Compiler API 等多个部分，因此我说它是「全面进阶」。
+
+这本小册的一个特点在于，大部分章节中会有扩展阅读，以及除了正文还会有持续更新的漫谈篇内容，因为我希望你在这本小册中不仅仅是学会 TypeScript ，更重要的是获得广袤的技术视野。
+
+这本小册基本上包括了所有我的 TypeScript 使用经验以及对外分享内容，我可以很自信地说，**这是余杭区（杭州市）最好的 TypeScript 教程**。
 
 ## 代码分布
 
-- 基础篇
-- 类型编程基础篇
-- 类型系统篇
-- 工具类型篇
+- 类型基础
+- 类型工具、类型系统、类型编程
 - 模板字符串类型专题篇
-- 工程（类型声明、命名空间、类型指令等）
-- React & ESLint
-- 装饰器 & IoC
-- 工具库
-- TSConfig 相关
+- 声明文件、命名空间等工程能力
+- React
+- ESLint
+- 装饰器与 IoC 容器
+- Project References
 - Compiler API
-- 基于 Prisma + NestJs 的 API
+- 基于 Prisma + NestJs 的 Node API
 
 ## Q & A
 
