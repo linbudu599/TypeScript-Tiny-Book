@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "strictNullChecks": true,
+    "lib": ["es2021"],
+    "target": "ES2021",
+    "strictFunctionTypes": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "declaration": true,
+    "exactOptionalPropertyTypes": true,
+    "allowUmdGlobalAccess": false
+  },
+  "include": ["a.ts"]
+}

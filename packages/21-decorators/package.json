@@ -1,0 +1,16 @@
+{
+  "name": "21-decorators",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsnd --respawn --transpile-only src/index.ts",
+    "watch": "tsc --watch",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.1.13"
+  }
+}

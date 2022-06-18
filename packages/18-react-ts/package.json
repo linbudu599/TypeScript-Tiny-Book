@@ -1,0 +1,45 @@
+{
+  "name": "vite-project",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "eslint": "eslint src/** --no-error-on-unmatched-pattern --ext .js .jsx .ts .tsx --cache",
+    "eslint:fix": "npm run eslint -- --fix",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "lint": "npm run eslint && npm run prettier",
+    "lint:fix": "npm run eslint:fix && npm run prettier:fix",
+    "_prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --cache --fix",
+      "prettier --write --list-different"
+    ],
+    "*.{json,md,html,css,scss,sass,less,styl}": [
+      "prettier --write --list-different"
+    ]
+  },
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
+    "@vitejs/plugin-react": "^1.3.0",
+    "eslint": "^8.17.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react": "^7.30.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.1",
+    "prettier": "^2.6.2",
+    "typescript": "^4.6.3",
+    "vite": "^2.9.9"
+  }
+}

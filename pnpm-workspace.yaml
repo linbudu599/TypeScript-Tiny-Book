@@ -1,0 +1,7 @@
+packages:
+  - "packages/**"
+# 设置为 false 时，workspace: 协议仍然有效
+link-workspace-packages: true
+# prefer-workspace-packages​: false
+shared-workspace-lockfile: true
+save-workspace-protocol: false

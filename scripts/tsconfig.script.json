@@ -1,0 +1,8 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "target": "es2018",
+    "module": "commonjs"
+  },
+  "include": ["scripts/**/*.ts"]
+}
