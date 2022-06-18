@@ -21,7 +21,7 @@
   "homepage": "https://github.com/LinbuduLab/pnpm-workspace-example#readme",
   "devDependencies": {
     "@changesets/cli": "^2.21.0",
-    "@parcel/packager-raw-url": "2.3.2",
+    "@parcel/packager-raw-url": "2.6.1",
     "@parcel/transformer-webmanifest": "2.3.2",
     "@types/fs-extra": "^9.0.13",
     "@types/jsonfile": "^6.1.0",
