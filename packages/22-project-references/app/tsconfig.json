@@ -1,0 +1,21 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "baseUrl": ".",
+    "outDir": "../dist/app"
+  },
+  "include": ["./**/*.ts"],
+  "references": [
+    {
+      "path": "../utils"
+    },
+    {
+      "path": "../core"
+    },
+    {
+      "path": "../ui"
+    }
+  ]
+}
