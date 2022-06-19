@@ -23,9 +23,19 @@ declare const struct: {
   handler: CustomHandler;
 };
 
-struct.handler = (name, age) => {};
+struct.handler = (name, age) => {
+  return true;
+};
 
 // 正常
 window.onerror = (event) => {};
 // 报错
 window.onerror = (event, source, line, col, err, extra) => {};
+
+declare let func: (raw: number) => (input: string) => any;
+
+// raw → number
+func = (raw) => {
+  // input → string
+  return (input) => {};
+};

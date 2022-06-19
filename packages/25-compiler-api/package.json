@@ -1,5 +1,5 @@
 {
-  "name": "22-compiler-api",
+  "name": "25-compiler-api",
   "version": "0.0.1",
   "description": "",
   "main": "./dist/index.js",
@@ -9,8 +9,5 @@
     "dev": "tsnd --respawn --transpile-only src/index.ts",
     "watch": "tsc --watch",
     "check": "tsc --noEmit"
-  },
-  "dependencies": {
-    "ts-morph": "^15.1.0"
   }
 }
