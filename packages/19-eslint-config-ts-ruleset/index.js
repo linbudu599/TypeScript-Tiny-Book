@@ -1,6 +1,5 @@
-import type { Linter } from 'eslint';
-
-const config: Linter.Config = {
+/** @type {import("eslint").Linter.Config}  */
+module.exports = {
   rules: {
     // 运算符两侧需要有空格，并增加对枚举类型支持
     'space-infix-ops': 'off',
@@ -12,6 +11,9 @@ const config: Linter.Config = {
 
     // 指定类型时应该正确添加空格
     '@typescript-eslint/type-annotation-spacing': 'error',
+
+    indent: 'off',
+    '@typescript-eslint/indent': ['error', 2],
 
     // 调用函数时，函数名与括号之间没有空格，并增加了对函数调用的泛型类型参数的支持
     'func-call-spacing': 'off',
@@ -159,5 +161,3 @@ const config: Linter.Config = {
     },
   ],
 };
-
-export default config;

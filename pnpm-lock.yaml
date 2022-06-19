@@ -150,6 +150,7 @@ importers:
       '@vitejs/plugin-react': ^1.3.0
       eslint: ^7.0.0
       eslint-config-prettier: ^8.5.0
+      eslint-config-ts-ruleset: workspace:^1.0.1
       eslint-plugin-react: ^7.30.0
       husky: ^8.0.0
       lint-staged: ^13.0.1
@@ -169,6 +170,7 @@ importers:
       '@vitejs/plugin-react': 1.3.2
       eslint: 7.32.0
       eslint-config-prettier: 8.5.0_eslint@7.32.0
+      eslint-config-ts-ruleset: link:../19-eslint-config-ts-ruleset
       eslint-plugin-react: 7.30.0_eslint@7.32.0
       husky: 8.0.1
       lint-staged: 13.0.1

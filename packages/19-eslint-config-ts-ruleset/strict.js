@@ -1,13 +1,6 @@
-import type { Linter } from 'eslint';
-
-const config: Linter.Config = {
+/** @type {import("eslint").Linter.Config}  */
+module.exports = {
   rules: {
-    /**
-     * 不强制数组类型，[] 与 Array 均可，如 string[] 与 Array<string>
-     * 可选：可设置为仅使用 [] 或者 Array，也可以设置为对于原始类型使用 []，对于对象使用 Array
-     * fixable
-     */
-    '@typescript-eslint/array-type': ['off'],
     /**
      * 只能 await promise(like) 的值，不允许 await 普通函数
      */
@@ -206,8 +199,6 @@ const config: Linter.Config = {
       },
     ],
     /**
-     * 不允许显式any，这个需要重点讨论下
-     * - 可以切换为 unknown + as 的形式，即在真正使用到的地方再显式的断言为需要类型
      * fixable
      */
     '@typescript-eslint/no-explicit-any': [
@@ -283,7 +274,7 @@ const config: Linter.Config = {
         args: 'none',
         // allow rest omit operator
         ignoreRestSiblings: true,
-        varsIgnorePattern: 'createElement|my|pi',
+        varsIgnorePattern: 'createElement',
         // allow _arg
         argsIgnorePattern: '^_',
         // catch statement
@@ -312,9 +303,9 @@ const config: Linter.Config = {
     // 使用字符串作为枚举成员值
     '@typescript-eslint/prefer-literal-enum-member': ['error'],
     // 使用 ?? 而不是 ||
-    '@typescript-eslint/prefer-nullish-coalescing': ['warn'],
+    '@typescript-eslint/prefer-nullish-coalescing': ['error'],
     // 使用 ?. 而不是 &&
-    '@typescript-eslint/prefer-optional-chain': ['warn'],
+    '@typescript-eslint/prefer-optional-chain': ['error'],
     // 为 reduce 方法传入显式的类型参数，因为通常 reduce 方法的初始值会是 [] 或者 {} 这种，没法推导出来结果类型
     '@typescript-eslint/prefer-reduce-type-parameter': ['error'],
     // 使用 @ts-expect-error 而不是 @ts-ignore
@@ -339,5 +330,3 @@ const config: Linter.Config = {
     '@typescript-eslint/type-annotation-spacing': ['error'],
   },
 };
-
-export default config;
