@@ -22,3 +22,5 @@ interface _StringifiedFoo {
 type Clone<T> = {
   [K in keyof T]: T[K];
 };
+
+export {};
