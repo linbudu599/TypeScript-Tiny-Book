@@ -10,8 +10,10 @@ declare class FooCls {}
 
 declare let otherProp: Foo['prop'];
 
+
+
 // Foo
-declare let result: ReturnType<typeof foo>;
+declare let result2: ReturnType<typeof foo>;
 
 declare module 'pkg' {
   const handler: () => boolean;
