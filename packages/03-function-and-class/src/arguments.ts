@@ -4,7 +4,7 @@ function foo(name: string, age?: number): number {
 }
 
 function foo1(name: string, age: number = 18): number {
-  const inputAge = age || 18;
+  const inputAge = age;
   return name.length + inputAge;
 }
 
