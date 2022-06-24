@@ -22,7 +22,7 @@ type SwapStartAndEnd<T extends any[]> = T extends [
   ...infer Left,
   infer End
 ]
-  ? [Start, Left, End]
+  ? [End, ...Left, Start]
   : T;
 
 // 调换开头两个
@@ -31,7 +31,7 @@ type SwapFirstTwo<T extends any[]> = T extends [
   infer Start2,
   ...infer Left
 ]
-  ? [Start2, Start1, Left]
+  ? [Start2, Start1, ...Left]
   : T;
 
 type ArrayItemType<T> = T extends Array<infer ElementType>
