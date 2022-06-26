@@ -23,7 +23,7 @@ export type ObjectKeysConcurrence<
 export type ObjectKeysIntersection<
   T extends PlainObjectType,
   U extends PlainObjectType
-> = Intersection<keyof T, keyof U> & Intersection<keyof U, keyof T>;
+> = Intersection<keyof T, keyof U>;
 
 // 属性名差集
 export type ObjectKeysDifference<

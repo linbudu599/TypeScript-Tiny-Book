@@ -13,6 +13,7 @@ const result4 = handler4('linbudu', 599); // void
 const arr: number[] = [];
 const list: number[] = [1, 2, 3];
 
-arr.forEach((item) => list.push(item));
+list.forEach((item) => arr.push(item));
+list.forEach(() => arr.push());
 
 export {};
