@@ -32,13 +32,14 @@ class User {
   @Required()
   name!: string;
 
-  @ValueType(TypeValidation.Boolean)
+  @ValueType(TypeValidation.Number)
   age!: number;
 }
 
 const user = new User();
 
-user.age = 18;
+// @ts-expect-error
+user.age = '18';
 
 function validator(entity: any) {
   const clsName = entity.constructor.name;
