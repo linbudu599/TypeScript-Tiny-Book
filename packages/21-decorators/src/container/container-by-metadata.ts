@@ -105,7 +105,7 @@ class Bus {
   fule!: Fuel;
 
   run() {
-    this.fule.fill('Car');
+    this.fule.fill('Bus');
     this.driver.adapt('Bus');
   }
 }
