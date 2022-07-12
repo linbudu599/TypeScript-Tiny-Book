@@ -2,7 +2,7 @@ type FunctionReturnType<T extends Func> = T extends (...args: any[]) => infer R
   ? R
   : never;
 
-type Swap<T extends any[]> = T extends [infer T, infer U] ? [U, T] : T;
+type Swap<T extends any[]> = T extends [infer R, infer U] ? [U, R] : T;
 
 type SwapResult1 = Swap<[1, 2]>; // [2, 1]
 type SwapResult2 = Swap<[1, 2, 3]>; // [1, 2, 3]
@@ -43,8 +43,8 @@ type ArrayItemTypeResult2 = ArrayItemType<string[]>; // string
 type ArrayItemTypeResult3 = ArrayItemType<[string, number]>; // string | number
 
 // 提取对象的属性类型
-type PropType<T, K extends keyof T> = T extends { [Key in K]: infer T }
-  ? T
+type PropType<T, K extends keyof T> = T extends { [Key in K]: infer R }
+  ? R
   : never;
 
 type PropTypeResult1 = PropType<{ name: string }, 'name'>; // string

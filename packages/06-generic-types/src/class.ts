@@ -6,7 +6,11 @@ class Queue<TElementType> {
   }
 
   // 入队
-  enqueue<TElementType>(ele: TElementType): TElementType[] {}
+  enqueue<_TElementType extends TElementType>(
+    ele: _TElementType
+  ): TElementType[] {
+    this._list.push(ele);
+  }
 
   // 出队
   dequeue(): TElementType[] {}
