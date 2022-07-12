@@ -15,7 +15,7 @@ function fetchUserProfile(): Promise<IRes<IUserProfileRes>> {}
 type StatusSucceed = boolean;
 function handleOperation(): Promise<IRes<StatusSucceed>> {}
 
-interface IPaginitionRes<TItem = unknown> {
+interface IPaginationRes<TItem = unknown> {
   data: TItem[];
   page: number;
   totalCount: number;
@@ -23,5 +23,5 @@ interface IPaginitionRes<TItem = unknown> {
 }
 
 function fetchUserProfileList(): Promise<
-  IRes<IPaginitionRes<IUserProfileRes>>
+  IRes<IPaginationRes<IUserProfileRes>>
 > {}

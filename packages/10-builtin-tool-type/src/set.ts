@@ -5,7 +5,7 @@ type Exclude<T, U> = T extends U ? never : T;
 type AExtractB = Extract<1 | 2 | 3, 1 | 2 | 4>; // 1 | 2
 
 type _AExtractB =
-  | (1 extends 1 ? 1 : never) // 1
+  | (1 extends 1 | 2 | 4 ? 1 : never) // 1
   | (2 extends 1 | 2 | 4 ? 2 : never) // 2
   | (3 extends 1 | 2 | 4 ? 3 : never); // never
 

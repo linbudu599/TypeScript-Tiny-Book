@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../src/index.ts"],"names":[],"mappings":";;AAAA,6BAAiC;AAEjC,IAAA,gBAAU,EAAS,SAAS,CAAC,CAAC;AAE9B,OAAO,CAAC,GAAG,CAAC,mCAAmC,CAAC,CAAC","sourcesContent":["import { expectType } from 'tsd';\n\nexpectType<string>('linbudu');\n\nconsole.log('Your TypeScript Playground works!');\n"]}
