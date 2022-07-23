@@ -1,0 +1,15 @@
+{
+  "name": "linbudu",
+  "age": 22,
+  "sex": "male",
+  "favors": [
+    "execrise",
+    "writting",
+    999
+  ],
+  "job": {
+    "name": "programmer",
+    "stack": "javascript",
+    "company": "alibaba"
+  }
+}

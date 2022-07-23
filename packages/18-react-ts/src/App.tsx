@@ -1,9 +1,13 @@
-import { useState } from 'react';
+import { useState, createContext } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+type Ctx = ReturnType<typeof useState<number>>;
+
 function App(): JSX.Element {
   const [count, setCount] = useState(0);
+
+  const ctx = createContext<Ctx>([count, setCount] as Ctx);
 
   return (
     <div className="App">
@@ -43,3 +47,4 @@ function App(): JSX.Element {
 }
 
 export default App;
+
