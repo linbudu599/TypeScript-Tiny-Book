@@ -5,12 +5,20 @@ class Queue<TElementType> {
     this._list = initial;
   }
 
-  // 入队
-  enqueue<TElementType>(ele: TElementType): TElementType[] {}
+  // 入队一个队列泛型子类型的元素
+  enqueue<TType extends TElementType>(ele: TType): TElementType[] {
+    this._list.push(ele);
+    return this._list;
+  }
+
+  // 入队一个任意类型元素（无需为队列泛型子类型）
+  enqueueWithUnknownType<TType>(element: TType): (TElementType | TType)[] {
+    return [...this._list, element];
+  }
 
   // 出队
-  dequeue(): TElementType[] {}
-
-  // 入队一个任意类型元素
-  enqueueWithUnknownType<TType>(element: TType): (TElementType | TType)[] {}
+  dequeue(): TElementType[] {
+    this._list.pop();
+    return this._list;
+  }
 }
