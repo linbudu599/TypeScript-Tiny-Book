@@ -9,5 +9,8 @@
     "dev": "tsnd --respawn --transpile-only src/index.ts",
     "watch": "tsc --watch",
     "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "ts-morph": "^15.1.0"
   }
 }

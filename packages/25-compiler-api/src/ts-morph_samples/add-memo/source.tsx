@@ -4,6 +4,4 @@ const Comp = () => {
   return <></>;
 };
 
-export const foo = 1;
-
 export default Comp;

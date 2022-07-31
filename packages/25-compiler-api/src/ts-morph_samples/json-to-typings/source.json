@@ -11,5 +11,15 @@
     "name": "programmer",
     "stack": "javascript",
     "company": "alibaba"
-  }
+  },
+  "pets": [
+    {
+      "id": 1,
+      "type": "dog"
+    },
+    {
+      "id": 2,
+      "type": "cat"
+    }
+  ]
 }
