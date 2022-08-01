@@ -13,10 +13,10 @@ class Foo {
 
 function HijackSetter(val: string): MethodDecorator {
   return (target, methodIdentifier, descriptor: any) => {
-    const originalSetter = descriptor.set.bind(target);
+    const originalSetter = descriptor.set;
     descriptor.set = function (newValue: string) {
       const composed = `Raw: ${newValue}, Actual: ${val}-${newValue}`
-      originalSetter(composed);
+      originalSetter.call(this, composed);
       console.log(`HijackSetter: ${composed}`);
     };
     // 篡改 getter，使得这个值无视 setter 的更新，返回一个固定的值
@@ -28,4 +28,3 @@ function HijackSetter(val: string): MethodDecorator {
 
 const foo = new Foo();
 foo.value = 'LINBUDU'; // HijackSetter: Raw: LINBUDU, Actual: LIN_BU_DU-LINBUDU
-// console.log(foo.value); // 如果篡改了 getter，将直接返回 LIN_BU_DU
