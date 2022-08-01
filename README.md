@@ -2,7 +2,7 @@
 
 掘金小册「TypeScript 全面进阶指南」示例代码，余杭区最好的 TypeScript 教程！
 
-**课程购买地址请戳：[TypeScript 全面进阶指南](https://juejin.cn/book/7086408430491172901)**
+**课程购买地址请戳：[TypeScript 全面进阶指南](https://juejin.cn/book/7086408430491172901)**，优惠码：**8b45sMJa**
 
 如果你想通过视频学习，可以关注作者的另一个视频课：QCon+ 专题[「TypeScript 实战课：自顶向下学习 TypeScript 类型系统」](https://qconplus.infoq.cn/2022/beijing/track/1376)。
 
