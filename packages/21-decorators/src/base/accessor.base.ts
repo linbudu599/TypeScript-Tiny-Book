@@ -1,43 +1,31 @@
 class Foo {
-  // @HijackGetter()
+  _value!: string;
+
   get value() {
-    return 'linbudu';
+    return this._value;
   }
 
   @HijackSetter('LIN_BU_DU')
   set value(input: string) {
-    this.value = input;
+    this._value = input;
   }
-}
-
-function HijackGetter(): MethodDecorator {
-  return (_target, methodIdentifier, descriptor: any) => {
-    const originalGetter = descriptor.get;
-    descriptor.get = function () {
-      // originalGetter.call(this, `THIS IS MODIFIED`);
-      return 'LINBUDU';
-    };
-  };
 }
 
 function HijackSetter(val: string): MethodDecorator {
   return (target, methodIdentifier, descriptor: any) => {
-    const originalGetter = descriptor.get;
-    const originalSetter = descriptor.set;
+    const originalSetter = descriptor.set.bind(target);
     descriptor.set = function (newValue: string) {
-      console.log(`HijackSetter: ${newValue}`);
-      // return originalSetter.call(this, `THIS IS MODIFIED(${newValue})`);
-      // console.log(target, target.prototype, methodIdentifier, descriptor);
+      const composed = `Raw: ${newValue}, Actual: ${val}-${newValue}`
+      originalSetter(composed);
+      console.log(`HijackSetter: ${composed}`);
     };
+    // 篡改 getter，使得这个值无视 setter 的更新，返回一个固定的值
     // descriptor.get = function () {
-    //   // originalGetter.call(this, `THIS IS MODIFIED`);
     //   return val;
     // };
   };
 }
 
 const foo = new Foo();
-foo.value = 'LINBUDU';
-// console.log(foo.value);
-
-export {};
+foo.value = 'LINBUDU'; // HijackSetter: Raw: LINBUDU, Actual: LIN_BU_DU-LINBUDU
+// console.log(foo.value); // 如果篡改了 getter，将直接返回 LIN_BU_DU
