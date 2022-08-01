@@ -6,25 +6,16 @@ const p = new Project();
 
 const source = p.addSourceFileAtPath(path.resolve(__dirname, './source.ts'));
 
-// 获取所有导入声明
-export function getImportDeclarations(source: SourceFile): ImportDeclaration[] {
-  const importDeclarations = source
-    .getFirstChildByKind(SyntaxKind.SyntaxList)
-    ?.getChildrenOfKind(SyntaxKind.ImportDeclaration);
-
-  return importDeclarations ?? [];
-}
-
 // 获取所有导入声明中的模块名
 export function getImportModuleSpecifiers(source: SourceFile): string[] {
   return uniq(
-    getImportDeclarations(source).map((i) => i.getModuleSpecifierValue())
+    source.getImportDeclarations().map((i) => i.getModuleSpecifierValue())
   );
 }
 
 const REQUIRED = ['some_required_polyfill'];
 
-const allDeclarations = getImportDeclarations(source);
+const allDeclarations = source.getImportDeclarations();
 
 const allSpecifiers = getImportModuleSpecifiers(source);
 

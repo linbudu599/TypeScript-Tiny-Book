@@ -1,28 +1,19 @@
 import path from 'path';
-import { Project, SyntaxKind, SourceFile, ClassDeclaration } from 'ts-morph';
+import { Project, ClassDeclaration } from 'ts-morph';
 
 const p = new Project();
 
 const source = p.addSourceFileAtPath(path.resolve(__dirname, './source.ts'));
 
-// 获取所有 Class 声明
-export function getClassDeclarations(source: SourceFile): ClassDeclaration[] {
-  const classDeclarationList = source
-    .getFirstChildByKind(SyntaxKind.SyntaxList)!
-    .getChildrenOfKind(SyntaxKind.ClassDeclaration);
-
-  return classDeclarationList;
-}
-
 const IMPLS = ['Handler'];
 
 // 获取所有目标 Class 声明
-const filteredClassDeclarations: ClassDeclaration[] = getClassDeclarations(
-  source
-).filter((cls) => {
-  const impls = cls.getImplements().map((impl) => impl.getText());
-  return IMPLS.some((impl) => impls.includes(impl));
-});
+const filteredClassDeclarations: ClassDeclaration[] = source
+  .getClasses()
+  .filter((cls) => {
+    const impls = cls.getImplements().map((impl) => impl.getText());
+    return IMPLS.some((impl) => impls.includes(impl));
+  });
 
 const METHODS = ['handle'];
 
