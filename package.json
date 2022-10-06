@@ -31,7 +31,7 @@
     "@types/prettier": "^2.4.4",
     "@types/prompts": "^2.0.14",
     "cac": "^6.7.12",
-    "chalk": "^4.1.2",
+    "chalk": "^5.1.0",
     "consola": "^2.15.3",
     "enquirer": "^2.3.6",
     "execa": "^5.0.0",
