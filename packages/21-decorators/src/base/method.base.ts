@@ -10,12 +10,12 @@ class Foo {
 }
 
 function ComputeProfiler(): MethodDecorator {
-  const start = new Date();
   return (
     _target,
     methodIdentifier,
     descriptor: TypedPropertyDescriptor<any>
   ) => {
+    const start = new Date();
     const originalMethodImpl = descriptor.value!;
     descriptor.value = async function (...args: unknown[]) {
       const res = await originalMethodImpl.apply(this, args);
