@@ -38,7 +38,7 @@
     "fs-extra": "^10.0.1",
     "jsonfile": "^6.1.0",
     "minimist": "^1.2.5",
-    "nanoid": "^3.3.1",
+    "nanoid": "^4.0.1",
     "npm-check-updates": "^12.5.3",
     "ora": "^5.4.1",
     "preferred-pm": "^3.0.3",
